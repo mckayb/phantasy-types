@@ -69,4 +69,4 @@ Find a bug? Want to make any additions?
 Just create an issue or open up a pull request.
 
 ## Inspiration
-    * [Daggy](https://github.com/fantasyland/daggy)
+  * [Daggy](https://github.com/fantasyland/daggy)

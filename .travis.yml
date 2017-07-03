@@ -1,0 +1,16 @@
+language: php
+
+php:
+  - '7.0'
+  - '7.1'
+
+install:
+  - composer install --prefer-source
+
+script:
+  - mkdir -p build/logs
+  - composer coverage
+  - composer lint
+
+after_success:
+  - composer upload-coverage

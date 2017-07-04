@@ -1,7 +1,11 @@
 # Phantasy Types [![Build Status](https://travis-ci.org/mckayb/phantasy-types.svg?branch=master)](https://travis-ci.org/mckayb/phantasy-types) [![Coverage Status](https://coveralls.io/repos/github/mckayb/phantasy-types/badge.svg?branch=master)](https://coveralls.io/github/mckayb/phantasy-types)
 Library for creating Sum Types and Product Types in PHP
 
-## Product Types
+## Getting Started
+### Installation
+`composer require mckayb/phantasy-types`
+### Usage
+#### Product Types
 ```php
 use function Phantasy\Types\product;
 
@@ -26,7 +30,7 @@ $b = $a->scale(2);
 echo $b; // 'Point3D(2, 4, 6)'
 ```
 
-## Sum Types
+#### Sum Types
 ```php
 use function Phantasy\Types\sum;
 

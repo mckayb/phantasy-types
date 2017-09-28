@@ -79,10 +79,24 @@ function sum(string $name, array $constructors)
                     {
                         public function __construct($fields, $fieldValues, $key, $parentCtx)
                         {
+                            if (count($fields) !== count($fieldValues)) {
+                                throw new Exception(
+                                    'There are '
+                                    . count($fields)
+                                    . ' fields, but '
+                                    . count($fieldValues)
+                                    . ' were passed in!'
+                                );
+                            }
+
                             $this->fields = $fields;
                             $this->fieldValues = $fieldValues;
                             $this->parentCtx = $parentCtx;
                             $this->tag = $key;
+
+                            foreach ($fields as $i => $field) {
+                                $this->$field = $fieldValues[$i];
+                            }
                         }
 
                         public function __call($method, $arguments)
@@ -102,7 +116,7 @@ function sum(string $name, array $constructors)
                                 return var_export($x, true);
                             }, $this->fieldValues);
                             return $this->parentCtx->name
-                                . '.' . $this->tag
+                                . '->' . $this->tag
                                 .'(' . implode(', ', $vals) . ')';
                         }
 

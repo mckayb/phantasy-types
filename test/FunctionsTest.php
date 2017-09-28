@@ -188,8 +188,10 @@ class FunctionsTest extends TestCase
         $d = $b->map(function ($x) {
             return $x + 1;
         });
+
         $this->assertEquals($option->Some(2), $c);
         $this->assertEquals($option->None(), $d);
+        $this->assertEquals($option->Some(2)->x, 2);
     }
 
     public function testMultipleValueSum()
@@ -206,7 +208,7 @@ class FunctionsTest extends TestCase
         echo $a;
         $d = ob_get_contents();
         ob_end_clean();
-        $this->assertEquals($d, "Foo.A('foo', 'bar')");
+        $this->assertEquals($d, "Foo->A('foo', 'bar')");
 
         $foo->map = function ($f) {
             return $this->cata([

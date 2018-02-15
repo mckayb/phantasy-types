@@ -2,7 +2,7 @@
     "name": "mckayb/phantasy-types",
     "description": "Sum Types and Product Types in PHP",
     "type": "library",
-    "license": "mit",
+    "license": "MIT",
     "authors": [
         {
             "name": "McKay Broderick",

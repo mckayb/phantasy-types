@@ -231,4 +231,15 @@ class FunctionsTest extends TestCase
         $this->assertEquals($foo->A('footest', 'bartest'), $c);
         $this->assertEquals($foo->B('footester', 'baz'), $d);
     }
+
+    public function testInsufficientNumArgsToSumConstructor()
+    {
+        $Foo = sum('Foo', [
+            'A' => ['a']
+        ]);
+
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessage("There are 1 fields, but 0 were passed in!");
+        $Foo->A();
+    }
 }

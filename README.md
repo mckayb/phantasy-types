@@ -1,4 +1,4 @@
-# Phantasy Types [![Build Status](https://travis-ci.org/mckayb/phantasy-types.svg?branch=master)](https://travis-ci.org/mckayb/phantasy-types) [![Coverage Status](https://coveralls.io/repos/github/mckayb/phantasy-types/badge.svg?branch=master)](https://coveralls.io/github/mckayb/phantasy-types)
+# Phantasy Types [![CircleCI](https://circleci.com/gh/mckayb/phantasy-types.svg?style=svg)](https://circleci.com/gh/mckayb/phantasy-types)[![Coverage Status](https://coveralls.io/repos/github/mckayb/phantasy-types/badge.svg?branch=master)](https://coveralls.io/github/mckayb/phantasy-types)
 Library for creating Sum Types and Product Types in PHP
 
 ## Getting Started
